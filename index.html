@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yente Sparla Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navigatie -->
+        <nav class="lettertype1" id="flexnav">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <img id="logoheader" src="assets/logoPortfolio.png" alt="Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#blok1">Portfolio</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="index.html">About me</a></li>
+            </ul>
+            <div id="toggle-theme" class="toggle-theme" onclick="toggleTheme()">
+                <div class="toggle-icon">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Introductie -->
+        <div class="introduction">
+            <div class="photo-container">
+                <img id="profielfoto" src="assets/profielfoto.jpg" alt="Yente Sparla">
+                <div class="explore-button">
+                    <button>EXPLORE</button>
+                </div>
+            </div>
+            <div class="intro-text">
+                <h1 class="titels lettertype3">Hi, ik ben Yente Sparla</h1>
+                <p id="tekst-intro" class="lettertype1">Hallo! Ik ben Yente, een 20-jarige Communicatie en Multimedia
+                    Design student uit Maastricht. Met een passie voor creatief ontwerpen en een scherp oog voor detail,
+                    streef ik ernaar om unieke en impactvolle ontwerpen te creëren. Mijn studies en projecten hebben me
+                    een breed scala aan vaardigheden opgeleverd, van grafisch ontwerp tot webontwikkeling. Neem een
+                    kijkje in mijn portfolio en ontdek hoe ik ideeën tot leven breng!</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <h5 class="projects lettertype2">
+                <span id="typed-text" class="lettertype2"></span>
+            </h5>
+            <img id="vorm2" src="assets/vorm2.png" alt="Image">
+        </div>
+
+
+        <!-- Blokken -->
+        <nav class="navigation lettertype2">
+            <a href="#blok1" class="nav-link">Blok 1</a>
+            <a href="#blok2" class="nav-link">Blok 2</a>
+            <a href="#blok3" class="nav-link">Blok 3</a>
+            <a href="#blok4" class="nav-link">Blok 4</a>
+        </nav>
+
+        <div class="background">
+            <section id="blok1" class="blok">
+                <h2 class="lettertype2 titelBlok">Blok 1 – The Design Papers</h2>
+
+                <div class="content">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Mijn fotografie projecten</h3>
+                        <p class="lettertype1 description">Tijdens mijn studie Communicatie en Multimedia Design heb ik
+                            diverse onderwerpen vastgelegd: van de kracht van sporters en de creativiteit van
+                            kunstenaars tot de passie van ondernemers. Elk beeld vertelt een uniek verhaal en toont mijn
+                            vermogen om emoties en momenten vast te leggen. Bekijk mijn fotogalerij en ontdek de wereld
+                            door mijn lens.</p>
+                        <button id="btnFotografie" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                    <img src="assets/fotografie2.jpg" alt="Online Magazine" class="image-left">
+                </div>
+
+                <div class="content">
+                    <img src="assets/mockupLaptop1.png" alt="Online Magazine" class="image-left">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Het online magazine</h3>
+                        <p class="lettertype1 description">Stap binnen in de wereld van inspiratie en ontdekking met
+                            "The Design Papers". Ons online platform brengt boeiende verhalen, diepgaande interviews en
+                            fascinerende artikelen over een breed scala aan onderwerpen, van kunst en cultuur tot
+                            technologie en lifestyle.</p>
+                        <button id="btnMagazine" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="background">
+            <section id="blok2" class="blok">
+                <h2 class="lettertype2 titelBlok">Blok 2 – De leescampagne</h2>
+
+                <div class="content">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">De leescampagne</h3>
+                        <p class="lettertype1 description">Duik in een wereld van verbeelding en avontuur met onze
+                            lees-app, speciaal ontworpen om kinderen te inspireren en aan te moedigen om meer te lezen.
+                            Met een uitgebreide bibliotheek van boeiende verhalen, interactieve functies en
+                            beloningsystemen, is onze app de perfecte metgezel voor jonge lezers.</p>
+                        <button id="btnLeescampagne" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                    <img src="assets/mockupTelefoon app1.png" alt="Blurb app - dark mode" class="image-left">
+                </div>
+
+                <div class="content">
+                    <img src="assets/mockupPosters.png" alt="Posters Blurb" class="image-left">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Posters en flyers voor de leescampagne</h3>
+                        <p class="lettertype1 description">Ontdek de kracht van lezen en word onderdeel van onze
+                            leescampagne! We hebben kleurrijke flyers en posters gemaakt om je uit te nodigen voor een
+                            avontuurlijke reis door de wereld van verhalen.</p>
+                        <button id="btnPosters" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="background">
+            <section id="blok3" class="blok">
+                <h2 class="lettertype2 titelBlok">Blok 3 - Gen-art</h2>
+
+                <div class="content">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Generatieve kunst</h3>
+                        <p class="lettertype1 description">Stap binnen in een opwindend avontuur waar verleden, heden en
+                            toekomst samenkomen: het DJ GOGO Project over tijdreizen door generatieve kunst. In deze
+                            unieke creatieve reis verkennen we de grenzen van de tijd en verbeelden we de rijke
+                            geschiedenis van muziek door middel van innovatieve technologieën en artistieke expressie.
+                        </p>
+                        <button id="btnGenArt" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                    <img src="assets/genart.png" alt="Generative Art" class="image-left">
+                </div>
+
+                <div class="content">
+                    <img src="assets/albumCover_Yente.jpg" alt="Album Cover" class="image-left">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Een album cover</h3>
+                        <p class="lettertype1 description">Betreed een universum doordrenkt met de warme gloed van rood,
+                            waar tijdreizen de essentie van het bestaan vormt. DJ GOGO's nieuwste albumcover is
+                            doordrenkt met de kracht van deze enkele kleur, die de diepte van het verleden, het heden en
+                            de toekomst weerspiegelt.</p>
+                        <button id="btnAlbumCover" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="background">
+            <section id="blok4" class="blok">
+                <h2 class="lettertype2 titelBlok">Blok 4 - Kunst met code</h2>
+
+                <div class="content">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">De workshop</h3>
+                        <p class="lettertype1 description">Stap binnen in een opwindend avontuur waar verleden, heden en
+                            toekomst samenkomen: het DJ GOGO Project over tijdreizen door generatieve kunst. In deze
+                            unieke creatieve reis verkennen we de grenzen van de tijd en verbeelden we de rijke
+                            geschiedenis van muziek door middel van innovatieve technologieën en artistieke expressie.
+                        </p>
+                        <button id="btnWorkshop" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                    <img src="assets/werkboekjes1.png" alt="Coodle werkboekjes" class="image-left">
+
+
+
+                </div>
+
+                <div class="content">
+                    <img src="assets/coodle.png" alt="Coodle" class="image-left">
+                    <div class="text-content">
+                        <h3 class="lettertype3 titelKopjes">Coodle</h3>
+                        <p class="lettertype1 description">Coodle is een project dat kinderen leert coderen via leuke en
+                            interactieve workshops. Onlangs werkten we rond het thema "jouw favoriete vakantieland". De
+                            kinderen programmeerden hun favoriete bestemmingen, waarmee ze zowel hun technische als
+                            creatieve vaardigheden lieten zien. Coodle inspireert jongeren om de digitale wereld te
+                            verkennen.</p>
+                        <button id="btnCoodle" class="lettertype2">Bekijk het hele item</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="skills-banner lettertype1">
+            <div class="skills-text">
+                <h2>Mijn vaardigheden zijn van een ander niveau.</h2>
+            </div>
+            <div class="skills-tags">
+                <span class="skill-tag">Design</span>
+                <span class="skill-tag">Coding</span>
+                <span class="skill-tag">Research</span>
+                <span class="skill-tag">Video</span>
+                <span class="skill-tag">Photography</span>
+                <span class="skill-tag">Good teamwork</span>
+                <span class="skill-tag">Social</span>
+            </div>
+        </div>
+
+
+        <div class="stats-container lettertype1">
+            <div class="stat-card">
+                <h4>1+</h4>
+                <p>years experience</p>
+            </div>
+            <div class="stat-card">
+                <h4>2</h4>
+                <p>happy customers so far</p>
+            </div>
+            <div class="stat-card">
+                <h4>+95%</< /h4>
+                    <p>Customer satisfaction</p>
+            </div>
+            <div class="stat-arrow">
+                <span>&#8594;</span>
+            </div>
+        </div>
+
+        <section class="testimonials">
+            <h2 class="lettertype2 titelScale">Wat vinden de klanten van mij</h2>
+            <div class="testimonial testimonial-item">
+                <div class="line top-line"></div>
+                <p class="lettertype1">"Lorem ipsum dolor sit amet. Ab galisum distinctio ut reiciendis sapiente in ipsa consectetur ea incidunt corrupti ab molestiae saepe nam rerum harum qui illo ratione. A voluptas velit est rerum tempora eos eius harum eos cupiditate quia non modi omnis quo beatae nihil hic nulla esse. Quo nulla vero qui veniam vitae aut eligendi velit aut obcaecati internos id doloremque unde. Aut aspernatur eaque aut asperiores nihil cum nihil odit et soluta pariatur."</p>
+                <h7 class="lettertype1 titelRecentie">- Mevrouw De Vries, Marketing Manager</h7>
+                <div class="line bottom-line"></div>
+            </div>
+            <div class="testimonial testimonial-item">
+                <div class="line top-line"></div>
+                <p class="lettertype1">"Ad tempore esse ut consequatur dolorem ut sapiente iste a quaerat facilis ut deleniti molestiae aut reiciendis sint At autem veniam. Sit necessitatibus commodi in corporis natus in incidunt odio eum nulla voluptatibus ut fuga deserunt qui quisquam autem ut laborum dolorem. Eum ipsa rerum qui enim atque ea dolorum eligendi sed consectetur magnam quo perferendis itaque et voluptatem doloribus hic odio suscipit?
+                    "</p>
+                <h7 class="lettertype1 titelRecentie">- Meneer Janssen, Evenementen Coördinator</h7>
+                <div class="line bottom-line"></div>
+            </div>
+            <div class="testimonial testimonial-item">
+                <div class="line top-line"></div>
+                <p class="lettertype1">"Ea quasi magni qui sint omnis id minima voluptas qui galisum pariatur. Id harum saepe et pariatur vero eum aliquam dolor et vero error et nihil fugit. Et modi sint nam voluptatem exercitationem ea assumenda consequatur. Sit eaque quos sit aliquid internos qui quia ipsum et odio suscipit vel dolore maiores sit ullam libero ea dolore sapiente.
+                    "</p>
+                <h7 class="lettertype1 titelRecentie">- Mevrouw Bakker, CEO</h7>
+                <div class="line bottom-line"></div>
+            </div>
+        </section>
+
+
+
+        <div class="page-container">
+            <div class="video-section">
+                <h2 class="lettertype2 titelAVD">Mijn AVD video's</h2>
+                <div class="video-player">
+                    <video id="video-player" width="640" height="360" controls>
+                        <source id="video-source" type="video/mp4">
+                    </video>
+                    <div class="video-controls">
+                        <button class="colorButton" id="play-pause-button" class="control-button"><i
+                                class="fas fa-play"></i></button>
+                        <button class="colorButton" id="fast-forward-button" class="control-button"><i
+                                class="fas fa-forward"></i></button>
+                        <button class="colorButton" id="next-button" class="control-button">&#9655;&#9655;</button>
+                    </div>
+                </div>
+                <div class="video-buttons">
+                    <button class="video-button lettertype1"
+                        data-video="https://player.vimeo.com/progressive_redirect/playback/966000183/rendition/1080p/file.mp4?loc=external&signature=96e20ec7d5e8cd325d9be1c828c0b5c50c49fb02d589f63d0189268a630888f3">AVD1
+                        – Toon jezelf</button>
+                    <button class="video-button lettertype1"
+                        data-video="https://player.vimeo.com/progressive_redirect/playback/965996637/rendition/1080p/file.mp4?loc=external&signature=316d9fd07aad3813b9df4da95facc7b7d7db2e5cf78e67b24ac9f702a9f4c9f5">AVD1
+                        – Reportage</button>
+                    <button class="video-button lettertype1"
+                        data-video="https://player.vimeo.com/progressive_redirect/playback/965995292/rendition/240p/file.mp4?loc=external&signature=86e8a10594d342795cda3a51308d7e47c62489ac1e28d67fb27f9a7a7d17a3db">AVD1
+                        – Ik film</button>
+                    <button class="video-button lettertype1"
+                        data-video="https://player.vimeo.com/progressive_redirect/playback/965993934/rendition/1080p/file.mp4?loc=external&signature=09ba780175730cd6cf240c56ff13a73f7b9417b219f45e8d96aee764f020a810">AVD1
+                        – Fictie scene</button>
+                    <button class="video-button lettertype1"
+                        data-video="https://player.vimeo.com/progressive_redirect/playback/968648510/rendition/1080p/file.mp4?loc=external&signature=41db907e9776aadac7b765ae6a0e2bd5a64a46dd26006a06b9271214cee43504">AVD1
+                        – Eindopdracht</button>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="lettertype2 titelSamenwerken">
+            <span id="typed-text-samenwerken"></span>
+        </h5>
+        <img id="vormLaatste" src="assets/vorm2.png" alt="Image">
+
+
+
+
+        <!-- BLOK 1 -->
+        <!-- Modal voor "Mijn fotografie projecten" -->
+        <div id="modal-fotografie" class="modal">
+            <div class="modal-content">
+                <span class="close close-fotografie">&times;</span>
+                <h2 class="lettertype2 titelDetail">Mijn fotografie projecten</h2>
+                <p class="lettertype1 beschrijvingDetail">Tijdens mijn studie Communicatie en Multimedia Design heb ik
+                    diverse onderwerpen vastgelegd: van de kracht van sporters en de creativiteit van kunstenaars tot de
+                    passie van ondernemers. Elk beeld vertelt een uniek verhaal en toont mijn vermogen om emoties en
+                    momenten vast te leggen. Bekijk mijn fotogalerij en ontdek de wereld door mijn lens.</p>
+                <p class="lettertype1 beschrijvingDetail">Dit was mijn eerste keer dat ik serieus aan de slag ging met
+                    fotografie, en het was een leerzame en inspirerende ervaring. Gedurende de cursus kregen we
+                    verschillende opdrachten die ons uitdaagden om onze technische en creatieve vaardigheden te
+                    ontwikkelen.</p>
+                <p class="lettertype1 beschrijvingDetail">Mijn eerste opdracht richtte zich op het vastleggen van
+                    beweging, wat mijn timing en precisie in fotografie verbeterde. De daaropvolgende opdracht over
+                    scherpte leerde me het belang van scherptediepte en aandacht voor detail.</p>
+                <p class="lettertype1 beschrijvingDetail">Geïnspireerd door de Nederlandse fotograaf Huberto Tan,
+                    verdiepte ik me in licht en compositie en experimenteerde ik met verschillende stijlen en
+                    technieken. De reflectie-opdracht daagde me uit om creatief gebruik te maken van licht en schaduwen,
+                    waardoor ik op een andere manier naar mijn omgeving leerde kijken. Het maken van foto's voor een
+                    website was een leerzame ervaring, waarbij ik ontdekte hoe belangrijk het is om visueel
+                    aantrekkelijke en functionele foto's te creëren die passen bij de branding.</p>
+                <p class="lettertype1 beschrijvingDetail">Een van de hoogtepunten was de fotoshoot tijdens de Dutch
+                    Design Week, waar ik innovatieve ontwerpen en de unieke sfeer van het evenement vastlegde. Deze
+                    opdrachten hebben me geholpen mijn vaardigheden te ontwikkelen en de kracht van fotografie als
+                    medium te ontdekken. Mijn fotogalerij biedt een inkijkje in mijn leerproces en creatieve groei. </p>
+                <div class="foto-galerij">
+                    <img src="assets/fotografie1.jpg" alt="Fotografie project 1">
+                    <img src="assets/fotografie2.jpg" alt="Fotografie project 2">
+                    <img src="assets/fotografie3.JPG" alt="Fotografie project 3">
+                    <img src="assets/fotografie4.JPG" alt="Fotografie project 4">
+                    <img src="assets/fotografie5.jpg" alt="Fotografie project 5">
+                    <img src="assets/fotografie6.jpg" alt="Fotografie project 6">
+                    <img src="assets/fotografie7.jpg" alt="Fotografie project 7">
+                    <img src="assets/fotografie8.jpg" alt="Fotografie project 8">
+                    <img src="assets/fotografie9.jpg" alt="Fotografie project 9">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal voor "Het online magazine" -->
+        <div id="modal-magazine" class="modal">
+            <div class="modal-content">
+                <span class="close close-magazine">&times;</span>
+                <h2 class="lettertype2 titelDetail">Het online magazine</h2>
+                <p class="lettertype1 beschrijvingDetail">Stap binnen in de wereld van inspiratie en ontdekking met "The
+                    Design Papers". Ons online platform brengt boeiende verhalen, diepgaande interviews en fascinerende
+                    artikelen over een breed scala aan onderwerpen, van kunst en cultuur tot technologie en lifestyle.
+                </p>
+                <p class="lettertype1 beschrijvingDetail">Tijdens dit project hebben we verschillende fasen doorlopen,
+                    van het opzetten van de website tot het creëren van content en het beheren van sociale media
+                    campagnes. We hebben samengewerkt met diverse experts op het gebied van kunst en cultuur, wat leidde
+                    tot een rijke en gevarieerde inhoud.</p>
+                <p class="lettertype1 beschrijvingDetail">Het was een geweldige ervaring om deel uit te maken van een
+                    team dat zich richt op het delen van inspirerende en educatieve verhalen. Het platform biedt een
+                    diepgaande blik op verschillende aspecten van design en lifestyle, en heeft tot doel een gemeenschap
+                    van creatieve denkers en doeners te inspireren.</p>
+                <div class="foto-galerij">
+                    <img src="assets/mockupLaptop1.png" alt="Magazine project 1">
+                    <img src="assets/mockupLaptop2.jpg" alt="Magazine project 2">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- BLOK 2 -->
+        <!-- Modal voor "De leescampagne" -->
+        <div id="modal-leescampagne" class="modal">
+            <div class="modal-content">
+                <span class="close close-leescampagne">&times;</span>
+                <h2 class="lettertype2 titelDetail">De leescampagne</h2>
+                <p class="lettertype1 beschrijvingDetail">Nederlandse jongeren lezen steeds minder vaak en met minder
+                    plezier. Bijna de helft van de Nederlandse 15-jarigen vindt lezen een tijdsverspilling en leest 60%
+                    alleen als het echt moet. Het gevolg is dat hun leesvaardigheid achteruitgaat: maar liefst 18% van
+                    de 15-jarigen dreigt met een te laag taalniveau van school te komen. </p>
+                <p class="lettertype1 beschrijvingDetail">Cubiss ondersteunt organisaties die zich bezighouden met
+                    vraagstukken rondom lezen, leren en informeren, zoals het onderwijs, organisaties in het sociaal
+                    domein en bibliotheken. Door middel van onderzoek, scholing, evenementen, producten en publicaties
+                    helpen ze hun opdrachtgevers verder. </p>
+                <p class="lettertype1 beschrijvingDetail">Cubiss wil een campagne laten ontwikkelen gericht op jongeren
+                    van 12 tot 18 jaar, om hen te inspireren en motiveren om het lezen te (her)ontdekken. Aansluiten op
+                    hun belevingswereld is daarbij een must. Om de klus te klaren worden diverse multimediabureaus
+                    benaderd. </p>
+                <p class="lettertype1 beschrijvingDetail">Samen met Bas en Tim heb ik 'Blurb' bedacht. Blurb is een
+                    innovatieve lees-app die lijkt op TikTok, speciaal ontworpen om jongeren te inspireren en aan te
+                    moedigen om meer te lezen. Met een uitgebreide bibliotheek van boeiende verhalen, interactieve
+                    functies en beloningssystemen, is Blurb de perfecte metgezel voor jonge lezers. </p>
+                <p class="lettertype1 beschrijvingDetail">Onze opdracht omvat het ontwikkelen van een huisstijl,
+                    verschillende communicatiemiddelen en een ondersteunend digitaal platform dat jongeren tijdens en na
+                    de campagne motiveert en inspireert om met meer plezier te blijven lezen. Met Blurb hopen we
+                    jongeren te inspireren om lezen weer leuk en relevant te maken in hun dagelijks leven. </p>
+                <div class="foto-galerij">
+                    <img src="assets/mockupTelefoon app1.png" alt="Leescampagne project 1">
+                    <img src="assets/mockupTelefoon app2.png" alt="Leescampagne project 2">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal voor "Posters en flyers voor de leescampagne" -->
+        <div id="modal-posters" class="modal">
+            <div class="modal-content">
+                <span class="close close-posters">&times;</span>
+                <h2 class="lettertype2 titelDetail">Posters en flyers voor de leescampagne</h2>
+                <p class="lettertype1 beschrijvingDetail">Voor onze leescampagne hebben we kleurrijke flyers en posters
+                    ontworpen om de kracht van lezen te benadrukken. Deze visuele materialen zijn gemaakt om jongeren te
+                    inspireren en uit te nodigen voor een avontuurlijke reis door de wereld van verhalen. Met levendige
+                    afbeeldingen en pakkende teksten hopen we hun interesse te wekken en hen te motiveren om met meer
+                    plezier te gaan lezen. </p>
+                <div class="foto-galerij">
+                    <img src="assets/mockupPosters.png" alt="Poster project 1">
+                    <img src="assets/mockupPoster1.png" alt="Poster project 2">
+                    <img src="assets/mockuPoster2.png" alt="Poster project 3">
+                    <img src="assets/mockupInsta.jpg" alt="Instagram post">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- BLOK 3 -->
+        <!-- Modal voor "Generatieve kunst" -->
+        <div id="modal-genart" class="modal">
+            <div class="modal-content">
+                <span class="close close-genart">&times;</span>
+                <h2 class="lettertype2 titelDetail">Generatieve kunst</h2>
+                <p class="lettertype1 beschrijvingDetail">Onze opdrachtgevers dit blok waren het lectoraat Technology
+                    Driven Art en het Conservatorium Maastricht. Wij maakten interactieve muziekvisualisaties voor drie
+                    verschillende live bands, met als hoogtepunt een live performance in de week van 22 april. Tijdens
+                    dit optreden VJ-den we met het systeem dat we gedurende het blok hadden ontworpen. </p>
+                <p class="lettertype1 beschrijvingDetail">Generatieve kunst stond centraal in ons ontwerpprincipe. Deze
+                    kunstvorm kenmerkt zich door vormen en kleuren die niet op voorhand vaststaan, maar ontstaan door
+                    toeval of externe input, zoals live muziek. Om de visuals niet willekeurig te laten bewegen,
+                    ontwierpen we een systeem van regels en begrenzingen. Dit zorgde ervoor dat onze ontwerpen dynamisch
+                    en contextueel aanpasbaar waren, waardoor ze als het ware "leefden". </p>
+                <p class="lettertype1 beschrijvingDetail">Mijn specifieke project was GOGO, met als thema tijdreizen. Ik
+                    verkende de grenzen van tijd en verbeeldde de rijke geschiedenis van muziek door middel van
+                    innovatieve technologieën en artistieke expressie. </p>
+                <div class="foto-galerij">
+                    <img src="assets/genart.png" alt="Generative Art Project 1">
+                    <img src="assets/genart2.png" alt="Generative Art Project 2">
+                    <img src="assets/genart3.png" alt="Generative Art Project 3">
+                    <img src="assets/genart4.jpg" alt="Generative Art Project 4">
+                    <img src="assets/genart5.jpg" alt="Generative Art Project 5">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal voor "Een album cover" -->
+        <div id="modal-albumcover" class="modal">
+            <div class="modal-content">
+                <span class="close close-albumcover">&times;</span>
+                <h2 class="lettertype2 titelDetail">Een album cover</h2>
+                <p class="lettertype1 beschrijvingDetail">Betreed een universum doordrenkt met de warme gloed van rood,
+                    waar tijdreizen de essentie van het bestaan vormt. DJ GOGO's nieuwste albumcover is doordrenkt met
+                    de kracht van deze enkele kleur, die de diepte van het verleden, het heden en de toekomst
+                    weerspiegelt.</p>
+                <div class="foto-galerij">
+                    <img src="assets/albumCover_Yente.jpg" alt="Album Cover Project 1">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- BLOK 4 -->
+        <!-- Modal voor Workshop -->
+        <div id="modal-workshop" class="modal">
+            <div class="modal-content">
+                <span class="close close-workshop">&times;</span>
+                <h2 class="lettertype2 titelDetail">De workshop</h2>
+                <p class="lettertype1 beschrijvingDetail">In Blok 1.4 gaan we ons verdiepen in de relevante rol van
+                    coderen in de hedendaagse wereld. Het onderzoek richt zich op verschillende aspecten van code, zoals
+                    het nut van coderen en de relatie tussen kunst en technologie. Deze kennis wordt vervolgens
+                    toegepast in een interactieve workshop voor leerlingen van diverse scholen. </p>
+                <p class="lettertype1 beschrijvingDetail">In de creatieve les ‘Kunst met Code’ gaan we aan de slag met
+                    leerlingen van verschillende scholen. Het doel is om hen kennis te laten maken met coderen en hun
+                    creatieve ideeën te vertalen naar digitale kunstwerken. Dit doen we met behulp van de visuele
+                    programmeertaal P5. De leerlingen leren niet alleen de basisprincipes van programmeren, maar ook hoe
+                    ze hun analoge tekeningen en ideeën omzetten naar gecodeerde kunstwerken. Het eindresultaat is een
+                    uniek digitaal kunstwerk van elke leerling. </p>
+                <p class="lettertype1 beschrijvingDetail">De workshops prikkelen het logisch denkvermogen, de
+                    creativiteit en veerkracht van de leerlingen. Ze leren systematisch en gestructureerd denken, ook
+                    wel bekend als computational thinking, en ontwikkelen belangrijke digitale vaardigheden. </p>
+                <div class="foto-galerij">
+                    <img src="assets/werkboekjes1.png" alt="Werkboekje 1">
+                    <img src="assets/werkboekjes2.png" alt="Coodle werkboekjes" class="image-left">
+                    <img src="assets/werkboekjes3.png" alt="Coodle werkboekjes" class="image-left">
+                    <img src="assets/workshop.png" alt="Workshop" class="image-left">
+                    <img src="assets/workshop1.png" alt="Workshop" class="image-left">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal voor Coodle -->
+        <div id="modal-coodle" class="modal">
+            <div class="modal-content">
+                <span class="close close-coodle">&times;</span>
+                <h2 class="lettertype2 titelDetail">Coodle</h2>
+                <p class="lettertype1 beschrijvingDetail">Coodle is een innovatief project dat kinderen inspireert om de
+                    wereld van coderen te ontdekken. Met Coodle kunnen kinderen eenvoudig de visuele programmeertaal P5
+                    leren, waarmee ze hun creatieve ideeën kunnen omzetten in digitale kunstwerken. De website biedt
+                    niet alleen educatieve inhoud, maar ook een community-gedeelte waar jonge programmeurs hun projecten
+                    kunnen delen, feedback kunnen krijgen en samenwerken met leeftijdsgenoten. </p>
+                <p class="lettertype1 beschrijvingDetail">Ons doel is om de drempel tot coderen zo laag mogelijk te
+                    maken, zodat kinderen van alle leeftijden en achtergronden de vaardigheden van de toekomst kunnen
+                    ontwikkelen. Door gebruik te maken van speelse elementen en een gebruiksvriendelijke interface,
+                    maakt Coodle coderen niet alleen leerzaam, maar ook leuk en boeiend. Of het nu gaat om het creëren
+                    van een eenvoudig spel, het ontwerpen van een interactieve kunstinstallatie, of het oplossen van
+                    programmeerpuzzels, Coodle biedt de tools en ondersteuning die kinderen nodig hebben om hun digitale
+                    dromen te realiseren. </p>
+                <p class="lettertype1 beschrijvingDetail">
+                    <a href="http://coodle-workshops.nl/workshops.html"
+                        target="_blank">http://coodle-workshops.nl/workshops.html</a>
+                </p>
+                <div class="foto-galerij">
+                    <img src="assets/coodle.png" alt="Coodle 1">
+                    <img id="coodle" src="assets/logoCoodle.gif" alt="Coodle 1">
+                    <img src="assets/websiteCoodle.png" alt="Coodle 1">
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Boekingsformulier -->
+    <footer>
+        <div class="flexbox3">
+            <div class="contact-section lettertype1">
+                <div class="left-section">
+                    <h6 class="lettertypegroter">Contact me</h6>
+                    <h5 class="lettertype2">Let's grab a coffee</h5>
+                </div>
+                <div><img class="logoheader1" src="../assets/logoPortfolio.png" alt="Logo"></div>
+                <div class="contact-section2 lettertype1">
+                    <div class="left-section">
+                        <h6 class="lettertypegroter">yentesparla@hotmail.com</h6>
+                        <h5 class="lettertype2">@yenwebdesigns</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
