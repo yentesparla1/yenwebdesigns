@@ -1,252 +1,149 @@
-/* Toggle theme */
-function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const elementsToToggle = document.querySelectorAll('header, nav ul li a, .explore-button button, .toggle-theme, .toggle-icon, .introduction, .intro-text, .content-container, .projects, .navigation a, .background, .blok, .content, .skills-banner, .skills-tags .skill-tag, .stats-container, .stat-card, .stat-arrow, .testimonials, .testimonial, .page-container, .video-section h2, .video-player, .video-controls .control-button, .video-buttons .video-button, .footer-container, .footer-content, .contact-section, .contact-section h6, .contact-section h5, .contact-section p, .contact-section label, .contact-section input, .book-button, .flatpickr-calendar, .flatpickr-months, .flatpickr-day');
-    elementsToToggle.forEach(element => element.classList.toggle('dark-mode'));
-}
-
-/* Video speler */
-document.addEventListener("DOMContentLoaded", function() {
-    const videoElement = document.getElementById('video-player');
-    const videoSource = document.getElementById('video-source');
-    const videoButtons = document.querySelectorAll('.video-button');
-    const playPauseButton = document.getElementById('play-pause-button');
-    const fastForwardButton = document.getElementById('fast-forward-button');
-    const nextButton = document.getElementById('next-button');
-
-
-    videoButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const videoUrl = this.getAttribute('data-video');
-            videoSource.src = videoUrl;
-            videoElement.load();
-            videoElement.play();
-            playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.querySelector(".cta-button");
+            let isDragging = false;
+            let startX;
+            
+            button.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                button.style.transition = "none";
+            });
+            
+            document.addEventListener("mousemove", (e) => {
+                if (!isDragging) return;
+                let moveX = e.clientX - startX;
+                if (moveX > 0 && moveX < 180) {
+                    button.style.transform = `translateX(${moveX}px)`;
+                }
+            });
+            
+            document.addEventListener("mouseup", (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                button.style.transition = "transform 0.4s ease-in-out";
+                if (parseInt(button.style.transform.replace("translateX(", "").replace("px)", "")) > 150) {
+                    window.location.href = "mailto:yentesparla@hotmail.com";
+                    setTimeout(() => {
+                        button.style.transform = "translateX(0)";
+                    }, 500);
+                } else {
+                    button.style.transform = "translateX(0)";
+                }
+            });
         });
-    });
 
-    playPauseButton.addEventListener('click', function() {
-        if (videoElement.paused) {
-            videoElement.play();
-            playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-        } else {
-            videoElement.pause();
-            playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
-        }
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutText = document.querySelector('.about-text');
+        
+            function checkVisibility() {
+                const rect = aboutText.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    aboutText.classList.add('visible');
+                    window.removeEventListener('scroll', checkVisibility); // Remove the event listener once the element is visible
+                }
+            }
+        
+            window.addEventListener('scroll', checkVisibility);
+        });
 
-    nextButton.addEventListener('click', function() {
-        const currentVideoIndex = Array.from(videoButtons).findIndex(button => button.getAttribute('data-video') === videoSource.src);
-        const nextVideoIndex = (currentVideoIndex + 1) % videoButtons.length;
-        const nextVideoUrl = videoButtons[nextVideoIndex].getAttribute('data-video');
-        videoSource.src = nextVideoUrl;
-        videoElement.load();
-        videoElement.play();
-        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-    });
-
-    fastForwardButton.addEventListener('click', function() {
-        videoElement.currentTime += 10;
-    });
-});
-
-
-/* Datepicker */
-document.addEventListener("DOMContentLoaded", function() {
-    flatpickr("#date-picker", {
-        inline: true,
-        enableTime: false,
-        dateFormat: "Y-m-d",
-        defaultDate: new Date(),
-    });
-
-    flatpickr("#time-picker", {
-        enableTime: true,
-        noCalendar: true,
-        dateFormat: "H:i",
-        time_24hr: true,
-        defaultDate: "12:00",
-    });
-});
-
-/* Typing effect */
-document.addEventListener("DOMContentLoaded", function() {
-    var typed = new Typed("#typed-text", {
-        strings: ["Bekijk de gave projecten wat ik dit jaar heb gemaakt!"],
-        typeSpeed: 60,
-        backSpeed: 25,
-        backDelay: 2000,
-        startDelay: 500,
-        loop: true,
-        showCursor: true,
-        cursorChar: "|",
-    });
-    var typedSamenwerken = new Typed("#typed-text-samenwerken", {
-        strings: ["Samenwerken? Maak dan zeker een afspraak hieronder!"],
-        typeSpeed: 50,
-        backSpeed: 25,
-        backDelay: 2000,
-        startDelay: 500,
-        loop: true,
-        showCursor: true,
-        cursorChar: "|",
-    });
-});
-
-    // Modal voor fotografie projecten
-document.addEventListener("DOMContentLoaded", function() {
-    var modalFotografie = document.getElementById("modal-fotografie");
-    var btnFotografie = document.getElementById("btnFotografie");
-    var spanFotografie = modalFotografie.querySelector(".close");
-
-    btnFotografie.onclick = function() {
-        modalFotografie.style.display = "block";
-    }
-
-    spanFotografie.onclick = function() {
-        modalFotografie.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalFotografie) {
-            modalFotografie.style.display = "none";
-        }
-    }
-
-    // Modal voor het online magazine
-    var modalMagazine = document.getElementById("modal-magazine");
-    var btnMagazine = document.getElementById("btnMagazine");
-    var spanMagazine = modalMagazine.querySelector(".close-magazine");
-
-    btnMagazine.onclick = function() {
-        modalMagazine.style.display = "block";
-    }
-
-    spanMagazine.onclick = function() {
-        modalMagazine.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalMagazine) {
-            modalMagazine.style.display = "none";
-        }
-    }
-
-    // Modal voor de leescampagne
-    var modalLeescampagne = document.getElementById("modal-leescampagne");
-    var btnLeescampagne = document.getElementById("btnLeescampagne");
-    var spanLeescampagne = modalLeescampagne.querySelector(".close-leescampagne");
-
-    btnLeescampagne.onclick = function() {
-        modalLeescampagne.style.display = "block";
-    }
-
-    spanLeescampagne.onclick = function() {
-        modalLeescampagne.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalLeescampagne) {
-            modalLeescampagne.style.display = "none";
-        }
-    }
-
-    // Modal voor posters en flyers
-    var modalPosters = document.getElementById("modal-posters");
-    var btnPosters = document.getElementById("btnPosters");
-    var spanPosters = modalPosters.querySelector(".close-posters");
-
-    btnPosters.onclick = function() {
-        modalPosters.style.display = "block";
-    }
-
-    spanPosters.onclick = function() {
-        modalPosters.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalPosters) {
-            modalPosters.style.display = "none";
-        }
-    }
-
-    // Modal voor generatieve kunst
-    var modalGenArt = document.getElementById("modal-genart");
-    var btnGenArt = document.getElementById("btnGenArt");
-    var spanGenArt = modalGenArt.querySelector(".close-genart");
-
-    btnGenArt.onclick = function() {
-        modalGenArt.style.display = "block";
-    }
-
-    spanGenArt.onclick = function() {
-        modalGenArt.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalGenArt) {
-            modalGenArt.style.display = "none";
-        }
-    }
-
-    // Modal voor album cover
-    var modalAlbumCover = document.getElementById("modal-albumcover");
-    var btnAlbumCover = document.getElementById("btnAlbumCover");
-    var spanAlbumCover = modalAlbumCover.querySelector(".close-albumcover");
-
-    btnAlbumCover.onclick = function() {
-        modalAlbumCover.style.display = "block";
-    }
-
-    spanAlbumCover.onclick = function() {
-        modalAlbumCover.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modalAlbumCover) {
-            modalAlbumCover.style.display = "none";
-        }
-    }
-
-// Modal for Workshop
-var modalWorkshop = document.getElementById("modal-workshop");
-var btnWorkshop = document.getElementById("btnWorkshop");
-var spanWorkshop = modalWorkshop.querySelector(".close-workshop");
-
-btnWorkshop.onclick = function() {
-    modalWorkshop.style.display = "block";
-}
-
-spanWorkshop.onclick = function() {
-    modalWorkshop.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modalWorkshop) {
-        modalWorkshop.style.display = "none";
-    }
-}
-
-// Modal for Coodle
-var modalCoodle = document.getElementById("modal-coodle");
-var btnCoodle = document.getElementById("btnCoodle");
-var spanCoodle = modalCoodle.querySelector(".close-coodle");
-
-btnCoodle.onclick = function() {
-    modalCoodle.style.display = "block";
-}
-
-spanCoodle.onclick = function() {
-    modalCoodle.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modalCoodle) {
-        modalCoodle.style.display = "none";
-    }
-}
-});
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+        
+            function checkVisibility() {
+                projectCards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        card.classList.add('visible');
+                    }
+                });
+            }
+        
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility(); // Initial check in case the elements are already in view
+        });
 
 
 
 
+        document.addEventListener('DOMContentLoaded', function () {
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = "block";
+                    document.body.classList.add('modal-open'); // Achtergrond scroll blokkeren
+                } else {
+                    console.error(`Modal met ID '${modalId}' niet gevonden.`);
+                }
+            }
+        
+            function closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = "none";
+                    document.body.classList.remove('modal-open'); // Achtergrond scroll herstellen
+                } else {
+                    console.error(`Modal met ID '${modalId}' niet gevonden.`);
+                }
+            }
+        
+            // Alleen cirkelHuisstijl-afbeeldingen openen de modal
+            document.querySelectorAll('.clickable-image').forEach(image => {
+                image.addEventListener('click', function () {
+                    const modalId = this.getAttribute('data-modal'); // Haal modal ID op
+                    if (modalId) {
+                        openModal(modalId);
+                    } else {
+                        console.error("Geen data-modal attribuut gevonden op afbeelding.");
+                    }
+                });
+            });
+        
+            // Laat sluitknoppen de juiste modal sluiten
+            document.querySelectorAll('.close').forEach(button => {
+                button.addEventListener('click', function () {
+                    const modal = button.closest('.modal'); // Zoek de juiste modal
+                    if (modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        
+            // Klik buiten de modal om te sluiten
+            window.addEventListener('click', function (event) {
+                if (event.target.classList.contains('modal')) {
+                    closeModal(event.target.id);
+                }
+            });
+        
+            // Voorkom dat de modal doorscrolt naar de achtergrond
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('wheel', function (event) {
+                    const modalContent = modal.querySelector('.padding'); // Zorg dat we het binnenste gedeelte targetten
+                    if (modalContent.scrollHeight > modalContent.clientHeight) {
+                        const isAtTop = modalContent.scrollTop === 0;
+                        const isAtBottom = modalContent.scrollTop + modalContent.clientHeight >= modalContent.scrollHeight;
+        
+                        if ((isAtTop && event.deltaY < 0) || (isAtBottom && event.deltaY > 0)) {
+                            event.preventDefault(); // Voorkomt dat de achtergrond scrolt als je bovenaan of onderaan bent
+                        }
+                    }
+                }, { passive: false });
+            });
+        });
+        
+        
+
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliderTrack = document.querySelector('.slider-track');
+        
+            sliderTrack.addEventListener('mouseenter', function () {
+                sliderTrack.style.animationPlayState = 'paused'; // Stop animatie bij hover
+            });
+        
+            sliderTrack.addEventListener('mouseleave', function () {
+                sliderTrack.style.animationPlayState = 'running'; // Start animatie weer
+            });
+        });
+        

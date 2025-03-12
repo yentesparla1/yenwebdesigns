@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html#over-mij">Over mij</a>
+                <div class="dropdown">
+                    <a href="index.html#mijn-projecten">Mijn projecten</a>
+                    <div class="dropdown-content">
+                        <a href="graphic-design.html">Graphic Design</a>
+                        <a href="fotografie.html">Fotografie</a>
+                        <a href="web-design.html">Web Design</a>
+                    </div>
+                </div>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <a href="index.html">
+                <img id="logo" src="assets/logo.png" alt="Logo">
+            </a>
+        </div>
+        <h1 class="titelProjecten">Web Design</h1>
+    </header>
+    <main>
+        <div class="image-container">
+            <img src="assets/MacbookDP.jpg" alt="Design Papers"> <!-- Dit is NIET klikbaar -->
+            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image" data-modal="myModalDP">
+        </div>
+        
+        <div class="image-container">
+            <img src="assets/DesignThinkTwice.jpg" alt="Think Twice"> <!-- Dit is NIET klikbaar -->
+            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image" data-modal="myModalTT">
+        </div>
+        
+
+
+        <!-- Modal DP -->
+        <div id="myModalDP" class="modal">
+            <img class="banner" src="assets/MacbookDP.jpg" alt="">
+            <div class="padding">
+                <h3 class="TitelModal">Het online magazine</h3>
+                <p class="tekstModal">Stap binnen in de wereld van inspiratie en ontdekking met The Design Papers! Ons online platform brengt boeiende verhalen, interviews en artikelen over <span class="highlight">kunst</span>, <span class="highlight">cultuur</span>, <span class="highlight">technologie</span> en <span class="highlight">lifestyle</span>.</p>
+                <p class="tekstModal tekstModal2">Tijdens dit project heb ik gewerkt aan de website, contentcreatie en sociale media campagnes. Samenwerking met experts zorgde voor een rijke en gevarieerde inhoud. Dit was mijn eerste gecodeerde website, een inspirerende ervaring!</p>
+                <p class="tekstModal tekstModal2">>Bekijk het resultaat hier: <a class="link" href="https://mia-mmt1-2324.github.io/final-yentesparla/artikel.html" target="_blank">The Design Papers</a></p>
+
+                <div class="lijn"></div>
+                <div class="InfoSchoolproject">
+                    <h4 class="InfoSchoolprojectTekst">Schoolproject - Cubiss</h4>
+                    <h4 class="InfoSchoolprojectTekst">2023</h4>
+                </div>
+                <div class="Mockups">
+                    <img src="assets/MacbookDP2.jpg" alt="">
+                    <img src="assets/MacbookDP3.jpg" alt="">
+                </div>
+                <div class="close" onclick="closeModal('myModalDP')">
+                    <img src="assets/closeIcon.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Think Twice -->
+        <div id="myModalTT" class="modal">
+            <img class="banner" src="assets/DesignThinkTwice.jpg" alt="">
+            <div class="padding">
+                <h3 class="TitelModal">Think Twice</h3>
+                <p class="tekstModal">Voor het Think Twice project in samenwerking met het <span class="highlight">CBS</span> hebben we een <span class="highlight">multimedia story</span> ontwikkeld om complexe data op een toegankelijke en visueel aantrekkelijke manier te presenteren. Ik heb zowel de website gecodeerd als het grafische ontwerp verzorgd, zodat de informatie helder en impactvol werd weergegeven.
+                </p>
+                <p class="tekstModal tekstModal2">Ons thema draaide om <span class="highlight">importeren of zelf maken</span>, met een focus op de impact van globalisering. Nederland importeert steeds meer goederen – vooral uit China – vanwege lagere productiekosten. Maar achter goedkope elektronica, zoals een telefoon, schuilt een complex verhaal van milieu-impact en arbeidsomstandigheden.</p>
+                <p class="tekstModal tekstModal2">Bekijk onze interactieve story hier: <a class="link" href="https://mia-mms-2425.github.io/team07/" target="_blank">The Design Papers</a></p>
+                <div class="lijn"></div>
+                <div class="InfoSchoolproject">
+                    <h4 class="InfoSchoolprojectTekst">Schoolproject - CBS</h4>
+                    <h4 class="InfoSchoolprojectTekst">2025</h4>
+                </div>
+                <div class="Mockups">
+                    <img src="assets/MacbookThinkTwice.jpg" alt="">
+                    <img src="assets/MacbookThinkTwice2.jpg" alt="">
+                </div>
+
+                <div class="close" onclick="closeModal('myModalDP')">
+                    <img src="assets/closeIcon.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-home">
+            <a href="index.html#mijn-projecten" class="back-button">Andere projecten</a>
+        </div>
+
+    </main>
+
+    <footer class="footer2">
+        <div class="footer-content">
+            <div class="footer-icons">
+                <div class="tooltip">
+                    <img src="assets/telefoonIcon2.png" alt="Telefoon">
+                    <span class="tooltiptext">+32 491 73 46 63</span>
+                </div>
+                <a href="mailto:yentesparla@hotmail.com">
+                    <img src="assets/mailIcon2.png" alt="E-mail">
+                </a>
+                <a href="https://www.instagram.com/yenwebdesigns/" target="_blank">
+                    <img src="assets/instagramIcon2.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/yente-sparla-14b9ba313/?originalSubdomain=be" target="_blank">
+                    <img src="assets/linkedinIcon2.png" alt="LinkedIn">
+                </a>
+            </div>
+            <img id="logoWit" src="assets/logo.png" alt="Logo">
+        </div>
+        <div class="footer-bottom">
+            <p class="color">&copy; 2024 Yente Sparla. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

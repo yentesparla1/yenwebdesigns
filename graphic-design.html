@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html#over-mij">Over mij</a>
+                <div class="dropdown">
+                    <a href="index.html#mijn-projecten">Mijn projecten</a>
+                    <div class="dropdown-content">
+                        <a href="graphic-design.html">Graphic Design</a>
+                        <a href="fotografie.html">Fotografie</a>
+                        <a href="web-design.html">Web Design</a>
+                    </div>
+                </div>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <a href="index.html">
+                <img id="logo" src="assets/logo.png" alt="Logo">
+            </a>
+        </div>
+        <h1 class="titelProjecten">Graphic Design</h1>
+    </header>
+    <main>
+        <div class="image-container">
+            <img src="assets/Mock-upBlurb.png" alt="Blurb Project">
+            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image"
+                data-modal="myModalBlurb">
+        </div>
+
+        <div class="image-container">
+            <img src="assets/CoodleFlyer.png" alt="Coodle Project">
+            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image"
+                data-modal="myModalCoodle">
+        </div>
+
+
+
+        <!-- Modal Blurb -->
+        <div id="myModalBlurb" class="modal">
+            <img class="banner" src="assets/Mock-upBlurb.png" alt="">
+            <div class="padding">
+                <h3 class="TitelModal">Blurb</h3>
+                <p class="tekstModal">Samen met Bas en Tim heb ik gewerkt aan Blurb, <span class="highlight">een
+                        innovatieve lees-app </span>die jongeren (12-18 jaar) op een
+                    TikTok-achtige manier inspireert om meer te lezen. Dit groepsproject was onderdeel van een campagne
+                    voor
+                    <span class="highlight">Cubiss</span>, gericht op het (her)ontdekken van <span
+                        class="highlight">leesplezier</span>. Mijn rol lag vooral bij de ontwikkeling van de
+                    huisstijl en visuele communicatie. Met interactieve functies en beloningen maakt Blurb lezen leuk en
+                    relevant voor jongeren.
+                </p>
+                <div class="lijn"></div>
+                <div class="InfoSchoolproject">
+                    <h4 class="InfoSchoolprojectTekst">Schoolproject - Cubiss</h4>
+                    <h4 class="InfoSchoolprojectTekst">2024</h4>
+                </div>
+                <div class="Mockups">
+                    <img src="assets/mockupBlurb.png" alt="">
+                    <img src="assets/mockupBlurb2.png" alt="">
+                </div>
+                <div class="close" onclick="closeModal('myModalBlurb')">
+                    <img src="assets/closeIcon.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Coodle -->
+        <div id="myModalCoodle" class="modal">
+            <img class="banner" src="assets/CoodleFlyer.png" alt="">
+            <div class="padding">
+                <h3 class="TitelModal">Coodle</h3>
+                <p class="tekstModal">In Blok 1.4 onderzoeken we de rol van coderen in de moderne wereld, met focus op
+                    het nut ervan en de link tussen <span class="highlight">kunst</span> en <span
+                        class="highlight">technologie</span>. Deze kennis passen we toe in de interactieve
+                    workshop Kunst met Code, waarin leerlingen kennismaken met coderen via de visuele <span
+                        class="highlight">programmeertaal P5</span>. Ze leren hun creatieve ideeën omzetten in digitale kunstwerken en ontwikkelen
+                    tegelijkertijd hun
+                    <span class="highlight">logisch denkvermogen</span> en <span class="highlight">computational
+                        thinking</span>.
+                </p>
+                <p class="tekstModal tekstModal2">Coodle is een innovatief platform dat kinderen inspireert om te
+                    coderen. Met P5 kunnen ze op een speelse manier <span class="highlight">digitale kunst</span> maken en hun projecten delen in een
+                    interactieve community. Ons doel is om coderen <span class="highlight">toegankelijk</span> en <span class="highlight">leuk</span> te maken, zodat kinderen
+                    essentiële digitale vaardigheden opdoen voor de toekomst.</p>
+                    <p class="tekstModal tekstModal2">Meer info: <a class="link" href="https://coodle-workshops.nl/index.html" target="_blank">Coodle Workshops</a></p>
+                <div class="lijn"></div>
+                <div class="InfoSchoolproject">
+                    <h4 class="InfoSchoolprojectTekst">Schoolproject</h4>
+                    <h4 class="InfoSchoolprojectTekst">2024</h4>
+                </div>
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <img src="assets/coodle1.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle2.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle5.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle3.png" alt="" class="slideshow-image">
+                        <img id="gifCoodle" src="assets/coodle4.gif" alt="" class="slideshow-image">
+
+                        <img src="assets/coodle1.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle2.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle5.png" alt="" class="slideshow-image">
+                        <img src="assets/coodle3.png" alt="" class="slideshow-image">
+                        <img id="gifCoodle" src="assets/coodle4.gif" alt="" class="slideshow-image">
+                    </div>
+                </div>
+
+                <div class="close" onclick="closeModal('myModalCoodle')">
+                    <img src="assets/closeIcon.png" alt="Close" class="close-icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-home">
+            <a href="index.html#mijn-projecten" class="back-button">Andere projecten</a>
+        </div>
+
+    </main>
+
+    <footer class="footer2">
+        <div class="footer-content">
+            <div class="footer-icons">
+                <div class="tooltip">
+                    <img src="assets/telefoonIcon2.png" alt="Telefoon">
+                    <span class="tooltiptext">+32 491 73 46 63</span>
+                </div>
+                <a href="mailto:yentesparla@hotmail.com">
+                    <img src="assets/mailIcon2.png" alt="E-mail">
+                </a>
+                <a href="https://www.instagram.com/yenwebdesigns/" target="_blank">
+                    <img src="assets/instagramIcon2.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/yente-sparla-14b9ba313/?originalSubdomain=be" target="_blank">
+                    <img src="assets/linkedinIcon2.png" alt="LinkedIn">
+                </a>
+            </div>
+            <img id="logoWit" src="assets/logo.png" alt="Logo">
+        </div>
+        <div class="footer-bottom">
+            <p class="color">&copy; 2024 Yente Sparla. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
