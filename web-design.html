@@ -9,12 +9,15 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="headerGraphicD">
         <div class="container">
+            <a href="index.html">
+                <img id="logo" src="assets/logo.png" alt="Logo">
+            </a>
             <nav>
                 <a href="index.html#over-mij">Over mij</a>
                 <div class="dropdown">
-                    <a href="index.html#mijn-projecten">Mijn projecten</a>
+                    <a href="index.html#mijn-projecten">Mijn vaardigheden</a>
                     <div class="dropdown-content">
                         <a href="graphic-design.html">Graphic Design</a>
                         <a href="fotografie.html">Fotografie</a>
@@ -23,43 +26,91 @@
                 </div>
                 <a href="index.html#contact">Contact</a>
             </nav>
-            <a href="index.html">
-                <img id="logo" src="assets/logo.png" alt="Logo">
-            </a>
+         
         </div>
         <h1 class="titelProjecten">Web Design</h1>
     </header>
     <main>
+        <div class="image-container2">
+
         <div class="image-container">
-            <img src="assets/MacbookDP.jpg" alt="Design Papers"> <!-- Dit is NIET klikbaar -->
-            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image" data-modal="myModalDP">
+            <img class="img" src="assets/Website mockup-FAROHR.png" alt="Design Papers">
+            <div class="project-overlay">
+                <h3 class="titelProjectOverlay">FARO HR</h3>
+                <div class="category-tags">
+                    <div class="category-tag">Fotografie</div>
+                    <div class="category-tag">Grafisch Design</div>
+                    <div class="category-tag">Webontwikkeling (WordPress)</div>
+                    <div class="category-tag">Storytelling</div>
+
+                </div>
+                <a href="#" class="project-button" data-modal="myModalDP">
+                    <span>Bekijk project</span>
+                    <svg class="arrow-icon" width="36" height="30" viewBox="0 0 36 30" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.9299 10.7551C29.1099 10.7551 24.3899 6.1651 24.3199 0.475098H16.0899C16.1199 4.3551 17.3599 7.9451 19.4699 10.9051H0.919922V18.7051H19.4399C17.3299 21.6951 16.0899 25.3151 16.0899 29.2251C16.0899 29.3251 16.0899 29.4251 16.0899 29.5251H24.3299C24.3299 29.4251 24.3099 29.3251 24.3099 29.2251C24.3099 23.5251 28.9899 18.8951 34.7899 18.8251C34.7899 18.8251 34.8799 18.8251 34.9199 18.8251C35.0199 18.8251 35.1199 18.8251 35.2199 18.8251V10.7451C35.1199 10.7451 35.0199 10.7551 34.9199 10.7551H34.9299Z"
+                            fill="black"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
-        
+    </div>
         <div class="image-container">
-            <img src="assets/DesignThinkTwice.jpg" alt="Think Twice"> <!-- Dit is NIET klikbaar -->
-            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image" data-modal="myModalTT">
+            <img class="img" src="assets/DesignThinkTwice.jpg" alt="Think Twice">
+            <div class="project-overlay">
+                <h3 class="titelProjectOverlay">Think Twice</h3>
+                <div class="category-tags">
+                    <div class="category-tag">Webontwikkeling</div>
+                    <div class="category-tag">Storytelling</div>
+                    <div class="category-tag">Onderzoek</div>
+                    <div class="category-tag">Grafisch Design</div>
+
+                </div>
+                <a href="#" class="project-button" data-modal="myModalTT">
+                    <span>Bekijk project</span>
+                    <svg class="arrow-icon" width="36" height="30" viewBox="0 0 36 30" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.9299 10.7551C29.1099 10.7551 24.3899 6.1651 24.3199 0.475098H16.0899C16.1199 4.3551 17.3599 7.9451 19.4699 10.9051H0.919922V18.7051H19.4399C17.3299 21.6951 16.0899 25.3151 16.0899 29.2251C16.0899 29.3251 16.0899 29.4251 16.0899 29.5251H24.3299C24.3299 29.4251 24.3099 29.3251 24.3099 29.2251C24.3099 23.5251 28.9899 18.8951 34.7899 18.8251C34.7899 18.8251 34.8799 18.8251 34.9199 18.8251C35.0199 18.8251 35.1199 18.8251 35.2199 18.8251V10.7451C35.1199 10.7451 35.0199 10.7551 34.9199 10.7551H34.9299Z"
+                            fill="black"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
+
         
 
 
         <!-- Modal DP -->
+        <div class="overlay"></div>
         <div id="myModalDP" class="modal">
-            <img class="banner" src="assets/MacbookDP.jpg" alt="">
+            <img class="banner" src="assets/Website mockup-FAROHR.png" alt="">
             <div class="padding">
-                <h3 class="TitelModal">Het online magazine</h3>
-                <p class="tekstModal">Stap binnen in de wereld van inspiratie en ontdekking met The Design Papers! Ons online platform brengt boeiende verhalen, interviews en artikelen over <span class="highlight">kunst</span>, <span class="highlight">cultuur</span>, <span class="highlight">technologie</span> en <span class="highlight">lifestyle</span>.</p>
-                <p class="tekstModal tekstModal2">Tijdens dit project heb ik gewerkt aan de website, contentcreatie en sociale media campagnes. Samenwerking met experts zorgde voor een rijke en gevarieerde inhoud. Dit was mijn eerste gecodeerde website, een inspirerende ervaring!</p>
-                <p class="tekstModal tekstModal2">>Bekijk het resultaat hier: <a class="link" href="https://mia-mmt1-2324.github.io/final-yentesparla/artikel.html" target="_blank">The Design Papers</a></p>
+                <h3 class="TitelModal">FARO HR</h3>
+                <p class="tekstModal">Ik heb een website ontwikkeld voor <span class="highlight">Fabiënne Rouch</span>, van eerste idee tot eindresultaat. Tijdens dit project heb ik alles opgepakt: van <span class="highlight">de fotografie</span> en het ontwerpen van <span class="highlight">het prototype</span> tot de uiteindelijke <span class="highlight">webontwikkeling</span>. Ook heb ik de huisstijl doorvertaald naar de website, zodat alles één geheel vormt en goed past bij haar uitstraling.</p>
+                <p class="tekstModal tekstModal2">Bekijk het resultaat hier:   <a class="link1" href="https://farohr.nl/" target="_blank">FARO HR</a></p>
 
                 <div class="lijn"></div>
                 <div class="InfoSchoolproject">
-                    <h4 class="InfoSchoolprojectTekst">Schoolproject - Cubiss</h4>
-                    <h4 class="InfoSchoolprojectTekst">2023</h4>
+                    <h4 class="InfoSchoolprojectTekst">Project</h4>
+                    <h4 class="InfoSchoolprojectTekst">2026</h4>
                 </div>
-                <div class="Mockups">
-                    <img src="assets/MacbookDP2.jpg" alt="">
-                    <img src="assets/MacbookDP3.jpg" alt="">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <img src="assets/Call FARO.png" alt="" class="slideshow-image">
+                        <img src="assets/MockupMacbookFARO.png" alt="" class="slideshow-image">
+                        <img src="assets/Banner-fotoFARO.jpg" alt="" class="slideshow-image">
+                        <img src="assets/MockupFabienne.png" alt="" class="slideshow-image">
+                    
+                        <img src="assets/Call FARO.png" alt="" class="slideshow-image">
+                        <img src="assets/MockupMacbookFARO.png" alt="" class="slideshow-image">
+                        <img src="assets/Banner-fotoFARO.jpg" alt="" class="slideshow-image">
+                        <img src="assets/MockupFabienne.png" alt="" class="slideshow-image">
+                    </div>
                 </div>
+            </div>
+
                 <div class="close" onclick="closeModal('myModalDP')">
                     <img src="assets/closeIcon.png" alt="Close" class="close-icon">
                 </div>
@@ -67,6 +118,7 @@
         </div>
 
         <!-- Modal Think Twice -->
+        <div class="overlay"></div>
         <div id="myModalTT" class="modal">
             <img class="banner" src="assets/DesignThinkTwice.jpg" alt="">
             <div class="padding">
@@ -74,7 +126,7 @@
                 <p class="tekstModal">Voor het Think Twice project in samenwerking met het <span class="highlight">CBS</span> hebben we een <span class="highlight">multimedia story</span> ontwikkeld om complexe data op een toegankelijke en visueel aantrekkelijke manier te presenteren. Ik heb zowel de website gecodeerd als het grafische ontwerp verzorgd, zodat de informatie helder en impactvol werd weergegeven.
                 </p>
                 <p class="tekstModal tekstModal2">Ons thema draaide om <span class="highlight">importeren of zelf maken</span>, met een focus op de impact van globalisering. Nederland importeert steeds meer goederen – vooral uit China – vanwege lagere productiekosten. Maar achter goedkope elektronica, zoals een telefoon, schuilt een complex verhaal van milieu-impact en arbeidsomstandigheden.</p>
-                <p class="tekstModal tekstModal2">Bekijk onze interactieve story hier: <a class="link" href="https://mia-mms-2425.github.io/team07/" target="_blank">The Design Papers</a></p>
+                <p class="tekstModal tekstModal2">Bekijk onze interactieve story hier:   <a class="link1" href="https://mia-mms-2425.github.io/team07/" target="_blank">Think Twice</a></p>
                 <div class="lijn"></div>
                 <div class="InfoSchoolproject">
                     <h4 class="InfoSchoolprojectTekst">Schoolproject - CBS</h4>
@@ -117,7 +169,7 @@
             <img id="logoWit" src="assets/logo.png" alt="Logo">
         </div>
         <div class="footer-bottom">
-            <p class="color">&copy; 2024 Yente Sparla. Alle rechten voorbehouden.</p>
+            <p class="color">&copy; 2026 Yente Sparla. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 </body>

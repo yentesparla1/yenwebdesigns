@@ -13,10 +13,13 @@
 <body>
     <header>
         <div class="container">
-            <nav>
+            <a href="index.html">
+                <img id="logo" src="assets/logo.png" alt="Logo">
+            </a>
+            <nav id="nav-menu">
                 <a href="index.html#over-mij">Over mij</a>
                 <div class="dropdown">
-                    <a href="index.html#mijn-projecten">Mijn projecten</a>
+                    <a href="index.html#mijn-projecten">Mijn vaardigheden</a>
                     <div class="dropdown-content">
                         <a href="graphic-design.html">Graphic Design</a>
                         <a href="fotografie.html">Fotografie</a>
@@ -25,11 +28,13 @@
                 </div>
                 <a href="index.html#contact">Contact</a>
             </nav>
-            <a href="index.html">
-                <img id="logo" src="assets/logo.png" alt="Logo">
-            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-
+       
         <div class="header-content container">
             <div class="header-text">
                 <h1>Hi, ik ben<br> Yente Sparla</h1>
@@ -48,10 +53,7 @@
     <main>
         <div id="over-mij" class="about-section">
             <div class="skills1">
-                <div class="skill-card">
-                    <img src="assets/webdesign.png" alt="Web Design">
-                    <span>Web Design</span>
-                </div>
+              
                 <div class="skill-card">
                     <img src="assets/graphicdesign.png" alt="Graphic Design">
                     <span>Graphic Design</span>
@@ -60,10 +62,14 @@
                     <img src="assets/fotografie.png" alt="Fotografie">
                     <span>Fotografie</span>
                 </div>
+                <div class="skill-card">
+                    <img src="assets/webdesign.png" alt="Web Design">
+                    <span>Web Design</span>
+                </div>
             </div>
             <div class="about-text">
                 <h2 id="titel-aboutme">Wie ben ik?</h2>
-                <p class="aboutme-style">Hallo! Ik ben Yente, een 21-jarige Communicatie en Multimedia Design student
+                <p class="aboutme-style">Hallo! Ik ben Yente, een 22-jarige Communicatie en Multimedia Design student
                     uit Maastricht. Met een passie voor creatief ontwerpen en een scherp oog voor detail, streef ik
                     ernaar om unieke en impactvolle ontwerpen te creëren. Mijn studies en projecten hebben me een breed
                     scala aan vaardigheden opgeleverd, van grafisch ontwerp tot webontwikkeling. Neem een kijkje in mijn
@@ -71,7 +77,7 @@
             </div>
         </div>
         <div id="mijn-projecten" class="project-section">
-            <h2>Mijn projecten</h2>
+            <h2>Mijn vaardigheden</h2>
             <div class="projects">
                 <a href="graphic-design.html" class="project-card graphic-design">Graphic Design</a>
                 <a href="fotografie.html" class="project-card fotografie">Fotografie</a>

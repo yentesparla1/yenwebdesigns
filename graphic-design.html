@@ -11,12 +11,15 @@
 </head>
 
 <body>
-    <header>
+    <header class="headerGraphicD">
         <div class="container">
+            <a href="index.html">
+                <img id="logo" src="assets/logo.png" alt="Logo">
+            </a>
             <nav>
                 <a href="index.html#over-mij">Over mij</a>
                 <div class="dropdown">
-                    <a href="index.html#mijn-projecten">Mijn projecten</a>
+                    <a href="index.html#mijn-projecten">Mijn vaardigheden</a>
                     <div class="dropdown-content">
                         <a href="graphic-design.html">Graphic Design</a>
                         <a href="fotografie.html">Fotografie</a>
@@ -25,75 +28,121 @@
                 </div>
                 <a href="index.html#contact">Contact</a>
             </nav>
-            <a href="index.html">
-                <img id="logo" src="assets/logo.png" alt="Logo">
-            </a>
+
         </div>
         <h1 class="titelProjecten">Graphic Design</h1>
     </header>
     <main>
+        <div class="image-container2">
         <div class="image-container">
-            <img src="assets/Mock-upBlurb.png" alt="Blurb Project">
-            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image"
-                data-modal="myModalBlurb">
-        </div>
+            <img class="img" src="assets/HTthemabeeld 2026.jpg" alt="HotelloTOP">
+            <div class="project-overlay">
+                <h3 class="titelProjectOverlay">HotelloTOP Year Event 2026</h3>
+                <div class="category-tags">
+                    <div class="category-tag">Grafisch Design & branding</div>
+                    <div class="category-tag">Conceptontwikkeling</div>
+                    <div class="category-tag">Onderzoek</div>
+                    <div class="category-tag">Event support (stagehand)</div>
 
+                </div>
+                <a href="#" class="project-button" data-modal="myModalBlurb">
+                    <span class="bekijkProject">Bekijk project</span>
+                    <svg class="arrow-icon" width="36" height="30" viewBox="0 0 36 30" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.9299 10.7551C29.1099 10.7551 24.3899 6.1651 24.3199 0.475098H16.0899C16.1199 4.3551 17.3599 7.9451 19.4699 10.9051H0.919922V18.7051H19.4399C17.3299 21.6951 16.0899 25.3151 16.0899 29.2251C16.0899 29.3251 16.0899 29.4251 16.0899 29.5251H24.3299C24.3299 29.4251 24.3099 29.3251 24.3099 29.2251C24.3099 23.5251 28.9899 18.8951 34.7899 18.8251C34.7899 18.8251 34.8799 18.8251 34.9199 18.8251C35.0199 18.8251 35.1199 18.8251 35.2199 18.8251V10.7451C35.1199 10.7451 35.0199 10.7551 34.9199 10.7551H34.9299Z"
+                            fill="black"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
         <div class="image-container">
-            <img src="assets/CoodleFlyer.png" alt="Coodle Project">
-            <img src="assets/cirkelHuisstijl.png" alt="" class="overlay-image clickable-image"
-                data-modal="myModalCoodle">
+            <img class="img" src="assets/CoodleFlyer.png" alt="Coodle Project">
+            <div class="project-overlay">
+                <h3 class="titelProjectOverlay">Coodle</h3>
+                <div class="category-tags">
+                    <div class="category-tag">Grafisch Design</div>
+                    <div class="category-tag">Video</div>
+                    <div class="category-tag">Onderzoek</div>
+                </div>
+                <a href="#" class="project-button" data-modal="myModalCoodle">
+                    <span class="bekijkProject">Bekijk project</span>
+                    <svg class="arrow-icon" width="36" height="30" viewBox="0 0 36 30" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M34.9299 10.7551C29.1099 10.7551 24.3899 6.1651 24.3199 0.475098H16.0899C16.1199 4.3551 17.3599 7.9451 19.4699 10.9051H0.919922V18.7051H19.4399C17.3299 21.6951 16.0899 25.3151 16.0899 29.2251C16.0899 29.3251 16.0899 29.4251 16.0899 29.5251H24.3299C24.3299 29.4251 24.3099 29.3251 24.3099 29.2251C24.3099 23.5251 28.9899 18.8951 34.7899 18.8251C34.7899 18.8251 34.8799 18.8251 34.9199 18.8251C35.0199 18.8251 35.1199 18.8251 35.2199 18.8251V10.7451C35.1199 10.7451 35.0199 10.7551 34.9199 10.7551H34.9299Z"
+                            fill="black"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
+    </div>
 
 
-
-        <!-- Modal Blurb -->
+        <!-- Modal HotelloTOp Year Event 2026-->
+        <div class="overlay"></div>
         <div id="myModalBlurb" class="modal">
-            <img class="banner" src="assets/Mock-upBlurb.png" alt="">
+            <img class="banner" src="assets/HTthemabeeld 2026.jpg" alt="">
             <div class="padding">
-                <h3 class="TitelModal">Blurb</h3>
-                <p class="tekstModal">Samen met Bas en Tim heb ik gewerkt aan Blurb, <span class="highlight">een
-                        innovatieve lees-app </span>die jongeren (12-18 jaar) op een
-                    TikTok-achtige manier inspireert om meer te lezen. Dit groepsproject was onderdeel van een campagne
-                    voor
-                    <span class="highlight">Cubiss</span>, gericht op het (her)ontdekken van <span
-                        class="highlight">leesplezier</span>. Mijn rol lag vooral bij de ontwikkeling van de
-                    huisstijl en visuele communicatie. Met interactieve functies en beloningen maakt Blurb lezen leuk en
-                    relevant voor jongeren.
-                </p>
+                <h3 class="TitelModal">HotelloTOP Year Event 2026</h3>
+                <p class="tekstModal">Voor het <span class="highlight">HotelloTOP Year Event 2026</span> ontwikkelde ik het themabeeld en vertaalde dit naar een consistente visuele stijl. In samenwerking met het eventteam en team marcom werkte ik het concept verder uit via brainstormsessies en overleg, waarbij ik feedback van de adviesraad verwerkte. Na goedkeuring realiseerde ik het ontwerp van A tot Z, met toepassingen in zowel <span class="highlight">online middelen</span> (website en social media) als  <span class="highlight">offline uitingen</span> (banners, posters en presentatie-templates). Het resultaat is een creatieve en doelgroepgerichte visuele identiteit die in alle communicatie-uitingen samenkomt.
+                </p> <p class="tekstModal tekstModal2">Meer over het event lees je via:     <a class="link1"
+                    href="https://hotellotop.nl/hotellotop-year-event-2026/" target="_blank">HotelloTOP Year Event 2026</a></p>
                 <div class="lijn"></div>
                 <div class="InfoSchoolproject">
-                    <h4 class="InfoSchoolprojectTekst">Schoolproject - Cubiss</h4>
-                    <h4 class="InfoSchoolprojectTekst">2024</h4>
+                    <h4 class="InfoSchoolprojectTekst">Stage bij HSG</h4>
+                    <h4 class="InfoSchoolprojectTekst">September 2025 - januari 2026</h4>
                 </div>
-                <div class="Mockups">
-                    <img src="assets/mockupBlurb.png" alt="">
-                    <img src="assets/mockupBlurb2.png" alt="">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <img src="assets/WinnerTYA Cheque.png" alt="" class="slideshow-image">
+                        <img src="assets/BannerHT.jpg" alt="" class="slideshow-image">
+                        <img src="assets/HTthemabeeld 2026.jpg" alt="" class="slideshow-image">
+                        <img src="assets/DSC00965.jpg" alt="" class="slideshow-image">
+                        <img src="assets/DSC09176.png" alt="" class="slideshow-image">
+                        <img src="assets/DSC09898.png" alt="" class="slideshow-image">
+
+                        <img src="assets/WinnerTYA Cheque.png" alt="" class="slideshow-image">
+                        <img src="assets/HTthemabeeld 2026.jpg" alt="" class="slideshow-image">
+                        <img src="assets/BannerHT.jpg" alt="" class="slideshow-image">
+                        <img src="assets/DSC00965.jpg" alt="" class="slideshow-image">
+                        <img src="assets/DSC09176.png" alt="" class="slideshow-image">
+                        <img src="assets/DSC09898.png" alt="" class="slideshow-image">
+                    </div>
                 </div>
-                <div class="close" onclick="closeModal('myModalBlurb')">
-                    <img src="assets/closeIcon.png" alt="Close" class="close-icon">
-                </div>
+            </div>
+            <div class="close" onclick="closeModal('myModalBlurb')">
+                <img src="assets/closeIcon.png" alt="Close" class="close-icon">
             </div>
         </div>
 
         <!-- Modal Coodle -->
-        <div id="myModalCoodle" class="modal">
+        <div class="overlay"></div>
+       <div id="myModalCoodle" class="modal">
             <img class="banner" src="assets/CoodleFlyer.png" alt="">
             <div class="padding">
                 <h3 class="TitelModal">Coodle</h3>
-                <p class="tekstModal">In Blok 1.4 onderzoeken we de rol van coderen in de moderne wereld, met focus op
-                    het nut ervan en de link tussen <span class="highlight">kunst</span> en <span
-                        class="highlight">technologie</span>. Deze kennis passen we toe in de interactieve
-                    workshop Kunst met Code, waarin leerlingen kennismaken met coderen via de visuele <span
-                        class="highlight">programmeertaal P5</span>. Ze leren hun creatieve ideeën omzetten in digitale kunstwerken en ontwikkelen
-                    tegelijkertijd hun
-                    <span class="highlight">logisch denkvermogen</span> en <span class="highlight">computational
-                        thinking</span>.
+                <p class="tekstModal">Coderen speelt een steeds grotere rol in de moderne wereld, met toepassingen die
+                    variëren van <span class="highlight">kunst</span> tot <span class="highlight">technologie</span>. In
+                    de interactieve workshop Kunst met Code maken leerlingen op een creatieve manier kennis met coderen
+                    via de visuele <span class="highlight">programmeertaal P5</span>. Ze leren hun ideeën omzetten in
+                    <span class="highlight">digitale kunstwerken</span> en ontwikkelen tegelijkertijd hun <span
+                        class="highlight">logisch denkvermogen</span> en <span class="highlight">computational
+                        thinking</span>. Deze combinatie van technologie en kunst stimuleert zowel <span
+                        class="highlight">analytische</span> als <span class="highlight">creatieve vaardigheden</span>,
+                    waardoor leerlingen op een toegankelijke en inspirerende manier kennismaken met de kracht van
+                    programmeren.
+
+
                 </p>
                 <p class="tekstModal tekstModal2">Coodle is een innovatief platform dat kinderen inspireert om te
-                    coderen. Met P5 kunnen ze op een speelse manier <span class="highlight">digitale kunst</span> maken en hun projecten delen in een
-                    interactieve community. Ons doel is om coderen <span class="highlight">toegankelijk</span> en <span class="highlight">leuk</span> te maken, zodat kinderen
+                    coderen. Met P5 kunnen ze op een speelse manier <span class="highlight">digitale kunst</span> maken
+                    en hun projecten delen in een
+                    interactieve community. Ons doel is om coderen <span class="highlight">toegankelijk</span> en <span
+                        class="highlight">leuk</span> te maken, zodat kinderen
                     essentiële digitale vaardigheden opdoen voor de toekomst.</p>
-                    <p class="tekstModal tekstModal2">Meer info: <a class="link" href="https://coodle-workshops.nl/index.html" target="_blank">Coodle Workshops</a></p>
+             
                 <div class="lijn"></div>
                 <div class="InfoSchoolproject">
                     <h4 class="InfoSchoolprojectTekst">Schoolproject</h4>
@@ -147,7 +196,7 @@
             <img id="logoWit" src="assets/logo.png" alt="Logo">
         </div>
         <div class="footer-bottom">
-            <p class="color">&copy; 2024 Yente Sparla. Alle rechten voorbehouden.</p>
+            <p class="color">&copy; 2026 Yente Sparla. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 </body>
