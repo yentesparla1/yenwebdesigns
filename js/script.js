@@ -66,70 +66,58 @@
 
 
         document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.querySelector('.overlay'); // Selecteer de overlay
+        
+            // Functie om een modal te openen
             function openModal(modalId) {
                 const modal = document.getElementById(modalId);
                 if (modal) {
-                    modal.style.display = "block";
-                    document.body.classList.add('modal-open'); // Achtergrond scroll blokkeren
-                } else {
-                    console.error(`Modal met ID '${modalId}' niet gevonden.`);
+                    modal.style.display = 'block'; // Toon de modal
+                    overlay.style.display = 'block'; // Toon de overlay
+                    document.body.style.overflow = 'hidden'; // Blokkeer scrollen van de achtergrond
                 }
             }
         
+            // Functie om een modal te sluiten
             function closeModal(modalId) {
                 const modal = document.getElementById(modalId);
                 if (modal) {
-                    modal.style.display = "none";
-                    document.body.classList.remove('modal-open'); // Achtergrond scroll herstellen
-                } else {
-                    console.error(`Modal met ID '${modalId}' niet gevonden.`);
+                    modal.style.display = 'none'; // Verberg de modal
+                    overlay.style.display = 'none'; // Verberg de overlay
+                    document.body.style.overflow = ''; // Herstel scrollen van de achtergrond
                 }
             }
         
-            // Alleen cirkelHuisstijl-afbeeldingen openen de modal
-            document.querySelectorAll('.clickable-image').forEach(image => {
-                image.addEventListener('click', function () {
-                    const modalId = this.getAttribute('data-modal'); // Haal modal ID op
-                    if (modalId) {
-                        openModal(modalId);
-                    } else {
-                        console.error("Geen data-modal attribuut gevonden op afbeelding.");
-                    }
+            // Voeg klikgebeurtenissen toe aan projectknoppen
+            const buttons = document.querySelectorAll('.project-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); // Voorkom standaard linkgedrag
+                    const modalId = this.getAttribute('data-modal'); // Haal de modal-ID op
+                    openModal(modalId); // Open de juiste modal
                 });
             });
         
-            // Laat sluitknoppen de juiste modal sluiten
-            document.querySelectorAll('.close').forEach(button => {
+            // Voeg klikgebeurtenissen toe aan sluitknoppen
+            const closeButtons = document.querySelectorAll('.close');
+            closeButtons.forEach(button => {
                 button.addEventListener('click', function () {
-                    const modal = button.closest('.modal'); // Zoek de juiste modal
+                    const modal = button.closest('.modal'); // Zoek de dichtstbijzijnde modal
                     if (modal) {
-                        closeModal(modal.id);
+                        closeModal(modal.id); // Sluit de modal
                     }
                 });
             });
         
-            // Klik buiten de modal om te sluiten
-            window.addEventListener('click', function (event) {
-                if (event.target.classList.contains('modal')) {
-                    closeModal(event.target.id);
+            // Sluit de modal wanneer je buiten de modal klikt
+            overlay.addEventListener('click', function () {
+                const openModal = document.querySelector('.modal[style*="display: block"]');
+                if (openModal) {
+                    closeModal(openModal.id); // Sluit de modal
                 }
             });
-        
-            // Voorkom dat de modal doorscrolt naar de achtergrond
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.addEventListener('wheel', function (event) {
-                    const modalContent = modal.querySelector('.padding'); // Zorg dat we het binnenste gedeelte targetten
-                    if (modalContent.scrollHeight > modalContent.clientHeight) {
-                        const isAtTop = modalContent.scrollTop === 0;
-                        const isAtBottom = modalContent.scrollTop + modalContent.clientHeight >= modalContent.scrollHeight;
-        
-                        if ((isAtTop && event.deltaY < 0) || (isAtBottom && event.deltaY > 0)) {
-                            event.preventDefault(); // Voorkomt dat de achtergrond scrolt als je bovenaan of onderaan bent
-                        }
-                    }
-                }, { passive: false });
-            });
         });
+        
         
         
 
@@ -145,5 +133,109 @@
             sliderTrack.addEventListener('mouseleave', function () {
                 sliderTrack.style.animationPlayState = 'running'; // Start animatie weer
             });
+        });
+        
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+        
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const button = document.querySelector(".cta-button");
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+        
+            // Functie om te starten met slepen
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.touches ? e.touches[0].clientX : e.clientX;
+                button.style.transition = "none";
+            }
+        
+            // Functie om te bewegen
+            function onDrag(e) {
+                if (!isDragging) return;
+                currentX = e.touches ? e.touches[0].clientX : e.clientX;
+                let moveX = currentX - startX;
+        
+                if (moveX > 0) { // Alleen naar rechts laten slepen
+                    button.style.transform = `translateX(${moveX}px)`;
+                }
+            }
+        
+            // Functie om het slepen te stoppen
+            function stopDrag() {
+                if (!isDragging) return;
+                isDragging = false;
+                button.style.transition = "transform 0.4s ease-in-out";
+        
+                // Check of de knop ver genoeg is gesleept
+                if (currentX - startX > 150) {
+                    window.location.href = "mailto:yentesparla@hotmail.com";
+                    setTimeout(() => {
+                        button.style.transform = "translateX(0)";
+                    }, 500);
+                } else {
+                    button.style.transform = "translateX(0)";
+                }
+            }
+        
+            // Eventlisteners voor zowel muis als touch
+            button.addEventListener("mousedown", startDrag);
+            button.addEventListener("mousemove", onDrag);
+            button.addEventListener("mouseup", stopDrag);
+            button.addEventListener("mouseleave", stopDrag);
+        
+            button.addEventListener("touchstart", startDrag);
+            button.addEventListener("touchmove", onDrag);
+            button.addEventListener("touchend", stopDrag);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.project-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); // Voorkom standaard linkgedrag
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = 'block'; // Toon de modal
+                    }
+                });
+            });
+        
+            // Sluit de modals wanneer je buiten de modal klikt
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none'; // Verberg de modal
+                    }
+                });
+            });
+        });
+
+        
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".skills .rectangle, .skills .div, .skills .rectangle-2, .skills .rectangle-3, .skills .rectangle-4, .skills .rectangle-5, .skills .rectangle-6, .skills .rectangle-7, .skills .rectangle-8, .skills .rectangle-9, .skills .text-wrapper, .skills .text-wrapper-2, .skills .text-wrapper-3, .skills .text-wrapper-4, .skills .text-wrapper-5, .skills .text-wrapper-6, .skills .text-wrapper-7, .skills .text-wrapper-8, .skills .text-wrapper-9, .skills .text-wrapper-10");
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate"); // Voeg de animatieklasse toe wanneer zichtbaar
+                    }
+                });
+            }, { threshold: 0.5 });
+        
+            elements.forEach(element => observer.observe(element)); // Observeer elk element
         });
         

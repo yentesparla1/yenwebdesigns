@@ -12,7 +12,8 @@ header {
     background-color: #F9F7F2;
     color: #0F4C75;
     height: 80vh;
-    position: relative; /* Zorg ervoor dat de header de referentie is voor absolute positionering */
+    position: relative;
+    /* Zorg ervoor dat de header de referentie is voor absolute positionering */
 
 }
 
@@ -105,6 +106,74 @@ nav a:hover {
     font-size: 66px;
     margin: 0;
 }
+/* Animatie voor het binnenvliegen van de tekst */
+@keyframes flyIn {
+    0% {
+        transform: translateY(-100%); /* Start boven beeld */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Komt naar zijn normale positie */
+        opacity: 1;
+    }
+}
+
+/* Animatie voor fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animatie voor de ervaring */
+.experience {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: flyIn 1s ease-out forwards;
+    animation-delay: 1.5s; /* Start na 1,5 seconden */
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.text {
+    font-size: 18px;
+}
+
+/* Specifieke animatie voor "Hi, ik ben Yente Sparla" (header) */
+h1 {
+    animation: flyInFromTop 1s ease-out forwards;
+    animation-delay: 0.5s; /* Start na 0.5 seconden */
+    opacity: 0; /* Begin onzichtbaar */
+}
+
+/* Specifieke animatie voor "2 jaar ervaring" */
+.experience {
+    animation: flyInFromTop 1s ease-out forwards;
+    animation-delay: 1.3s; /* Start na 1 seconde */
+}
+
+/* Animatie voor tekst die van boven naar beneden komt */
+@keyframes flyInFromTop {
+    0% {
+        transform: translateY(-100%); /* Start boven het scherm */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Komt naar zijn normale positie */
+        opacity: 1;
+    }
+}
+
 
 .experience {
     font-size: 24px;
@@ -139,7 +208,8 @@ nav a:hover {
     position: absolute;
     bottom: 0;
     left: 75%;
-    transform: translateX(-50%); /* Centreer de afbeelding horizontaal */
+    transform: translateX(-50%);
+    /* Centreer de afbeelding horizontaal */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -754,65 +824,65 @@ main {
     margin: 0 auto;
     padding: 20px;
 }
+
 .image-container {
-    margin-top: -200px;
-    margin-left: -20px;
     width: 100vw;
-    padding: 0; 
-    box-sizing: border-box; 
-    text-align: center; 
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
     position: relative;
     display: inline-block;
+    position: relative;
+    display: inline-block;
+    position: relative;
+    width: 100%; /* Zorgt ervoor dat de container de volledige breedte in beslag neemt */
+    height: auto; /* Laat de hoogte automatisch aanpassen aan de inhoud */
+    margin: -2px;
+    overflow: hidden;
+    margin-left: -3px;
 }
+.image-container2{
+    margin-top: -200px;
+}
+
 .image-container img {
     display: block;
     max-width: 100%;
     height: auto;
-    transition: filter 0.3s ease; /* Voeg een overgang toe voor de blur */
+    transition: filter 0.3s ease;
+    /* Voeg een overgang toe voor de blur */
 }
 
-.image-container {
-    position: relative;
-    display: inline-block;
-}
+
 
 .clickable-image {
     display: block;
     max-width: 100%;
     height: auto;
-    transition: filter 0.3s ease; /* Voeg een overgang toe voor de blur */
+    transition: filter 0.3s ease;
 }
 
-.overlay-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px; /* Pas de grootte van de overlay-afbeelding aan naar wens */
-    height: auto;
-    pointer-events: auto; /* Maak de overlay-afbeelding klikbaar */
-    border-radius: 180px;
-    animation: pulse 2s infinite; /* Voeg een pulse animatie toe */
-    cursor: pointer; /* Verander de cursor naar een pointer */
+
+.img {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes pulse {
     0% {
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.1);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
-.overlay-image:hover {
-    animation: none; /* Stop de pulse animatie bij hover */
-    transform: translate(-50%, -50%) scale(1.2); /* Vergroot de afbeelding bij hover */
-    transition: transform 0.3s ease; /* Voeg een overgang toe voor de vergroting */
-}
+
 
 /* The Modal */
 .modal {
@@ -833,17 +903,20 @@ main {
     text-align: center;
 }
 
-.banner{
+.banner {
     width: 100%;
 }
-.padding{
+
+.padding {
     padding: 50px;
 }
-.lijn{
+
+.lijn {
     border-bottom: 2px solid #D5D3CF;
     margin: 40px auto;
     width: 90%;
 }
+
 .modal-content {
     margin: 0 auto;
     display: block;
@@ -852,25 +925,26 @@ main {
 }
 
 /* Add Animation */
-.modal-content, #caption { 
+.modal-content,
+#caption {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
+
+
 
 .mockup {
     width: 100%;
@@ -882,6 +956,7 @@ main {
     color: #ff7f50;
     font-weight: bold;
 }
+
 .InfoSchoolproject {
     display: flex;
     justify-content: space-between;
@@ -891,7 +966,8 @@ main {
     font-weight: bold;
     color: #2c3e50;
 }
-.InfoSchoolprojectTekst{
+
+.InfoSchoolprojectTekst {
     font-size: 30px;
     color: #0F4C75;
 }
@@ -901,16 +977,17 @@ main {
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
-    margin-left: auto; /* Voeg deze regel toe om de container te centreren */
-    margin-right: auto; /* Voeg deze regel toe om de container te centreren */
-    max-width: 100%; /* Zorg ervoor dat de container niet breder is dan de viewport */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
 .Mockups img {
     width: 45%;
     border-radius: 10px;
 }
-.TitelModal{
+
+.TitelModal {
     font-family: "Recoleta-Bold", Helvetica;
     font-weight: 700;
     color: #124d76;
@@ -918,7 +995,8 @@ main {
     text-align: left;
     margin-bottom: 15px;
 }
-.tekstModal{
+
+.tekstModal {
     font-family: "Work Sans", Helvetica;
     font-weight: 350;
     color: #124D76;
@@ -926,85 +1004,125 @@ main {
     text-align: left;
     line-height: normal;
 }
+
 .highlight {
     color: #ED6B3C;
     font-weight: bold;
     font-size: 18px;
 }
-.tekstModal2{
+
+.tekstModal2 {
     margin-top: 10px;
 }
-.link {
-    color: #ED6B3C;
+
+.link1 {
+    color: white; /* Witte tekst voor contrast */
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Voeg een overgang toe voor de kleur en transformatie */
+    cursor: pointer; /* Cursor altijd op pointer */
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ED6B3C, #FF4500);
+    box-shadow: 0 4px 10px rgba(237, 107, 60, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+    animation: none !important;
+
 }
 
-.link:hover {
-    color: #FF4500; /* Verander de kleur bij hover */
-    transform: scale(1.1); /* Vergroot de link iets bij hover */
+
+.link1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(237, 107, 60, 0.6);
 }
-.close {
-    position: absolute;
-    top: 35px;
-    right: 35px;
-    width: 40px;
-    height: 40px;
-    background-image: url('assets/closeIcon.png'); /* Voeg de achtergrondafbeelding toe */
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%; /* Maak de sluitknop een cirkel */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.clickable-image {
+    box-shadow: none !important;
 }
+
+@keyframes linkGlowEffect {
+    0% {
+        box-shadow: 0 4px 10px rgba(237, 107, 60, 0.4);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(237, 107, 60, 0.8);
+    }
+}
+
+
 
 .close-icon {
-    width: 70px; /* Pas de grootte van het kruis aan naar wens */
-    height: 70px;
-    pointer-events: none; /* Zorg ervoor dat de klikbare acties niet worden geblokkeerd */
+    position: absolute; /* Button blijft in de modal, maar is absoluut gepositioneerd ten opzichte van de modal */
+    top: 20px; /* Van bovenaf 20px */
+    right: 20px; /* Van rechts 20px */
+    width: 70px; 
+    height: 70px; 
+    background-image: url('assets/closeIcon.png');
+    background-size: cover; /* Zorg ervoor dat het plaatje goed schaling heeft */
+    background-position: center;
+    border-radius: 50%; /* Maak de button rond */
+    cursor: pointer;
+    z-index: 1001; /* Zorg ervoor dat de button altijd boven andere elementen komt */
+    transition: transform 0.2s ease; /* Vloeiende overgang voor hover */
 }
-.close:hover {
-    transform: scale(1.1); /* Vergroot de sluitknop bij hover */
+
+.close-icon:hover {
+    transform: scale(1.1); /* Vergroot de knop iets bij hover */
 }
+
+
+
+
+
 .slider-container {
     width: 100%;
     overflow: hidden;
     position: relative;
-    max-width: 100%; /* Pas aan naar wens */
+    max-width: 100%;
+    /* Pas aan naar wens */
 }
 
 .slider-track {
     display: flex;
-    width: max-content; /* Aantal afbeeldingen */
+    width: max-content;
+    /* Aantal afbeeldingen */
     animation: slideAnimation 30s linear infinite;
     gap: 20px;
-    animation-play-state: running !important; /* Zorgt ervoor dat hij niet stopt */
+    animation-play-state: running !important;
+    /* Zorgt ervoor dat hij niet stopt */
 
 }
 
 .slideshow-image {
     width: 90%;
-    max-width: 800px; /* Pas aan naar wens */
+    max-width: 800px;
+    /* Pas aan naar wens */
     height: auto;
     flex-shrink: 0;
 }
+
 .slideshow-image1 {
     max-width: 350px;
-    height: 350px; 
+    height: 350px;
     flex-shrink: 0;
-    object-fit: cover; 
-}
-/* Animatie voor het automatisch schuiven */
-@keyframes slideAnimation {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Halve breedte verplaatsen, zodat er altijd content is */
+    object-fit: cover;
 }
 
-#gifCoodle{
+/* Animatie voor het automatisch schuiven */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Halve breedte verplaatsen, zodat er altijd content is */
+}
+
+#gifCoodle {
     width: 20%;
     height: 20%;
     margin-top: 150px;
@@ -1035,29 +1153,34 @@ main {
 }
 
 /* Fotografie */
-.tekstFotografie{
-font-family: "Work Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.tekstFotografie {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-.headerFotografie{
+
+.headerFotografie {
     background-color: #F9F7F2;
     color: #0F4C75;
     height: 50vh;
 }
-.mainFotografie{
-width: 85%;
-margin: 0 auto;
+
+.mainFotografie {
+    width: 85%;
+    margin: 0 auto;
 }
-.tekstFotografie2{
+
+.tekstFotografie2 {
     margin-top: 10px;
 }
+
 .slider-container2 {
-  margin-top: 50px;
+    margin-top: 50px;
 }
-.footer2{
+
+.footer2 {
     background-color: #F9F7F2;
 }
 
@@ -1070,18 +1193,13 @@ body.modal-open::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* Donkere overlay */
-    backdrop-filter: blur(10px); /* Voeg blur toe */
-    z-index: 1;
-    
+    filter: blur(10px); /* Fallback voor browsers zonder backdrop-filter */
+    z-index: 999;
 }
 
-/* Zorg ervoor dat de modal voor de blur komt */
-.modal {
-    position: fixed;
-    z-index: 2; /* Hoger dan de blur overlay */
-}
 body.modal-open {
-    overflow: hidden; /* Voorkomt scrollen op de achtergrond */
+    overflow: hidden;
+    /* Voorkomt scrollen op de achtergrond */
 }
 
 
@@ -1146,9 +1264,10 @@ footer {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Plaats de tooltip boven het element */
+    bottom: 125%;
     left: 50%;
-    margin-left: -80px; /* Gebruik negatieve marge om de tooltip te centreren */
+    margin-left: -80px;
+    /* Gebruik negatieve marge om de tooltip te centreren */
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -1156,7 +1275,8 @@ footer {
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
-    top: 100%; /* Plaats de pijl onder de tooltip */
+    top: 100%;
+    /* Plaats de pijl onder de tooltip */
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -1168,6 +1288,384 @@ footer {
     visibility: visible;
     opacity: 1;
 }
-.color{
+
+.color {
     color: #124D76;
+}
+
+
+/* Responsive Home pagina */
+
+
+/* Stijl voor het hamburgermenu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 2;
+    /* Zorg ervoor dat het hamburgermenu boven de navigatie staat */
+
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #0F4C75;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+/* Stijl voor het kruisje */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@media (max-width: 900px) {
+    .about-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #titel-aboutme {
+        font-size: 28px;
+    }
+
+    .aboutme-style {
+        font-size: 16px;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+}
+
+/* Responsive stijl voor mobiele apparaten */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #F9F7F2;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-top: -40px;
+
+    }
+
+    .header-text h1 {
+        font-size: 44px;
+        margin-top: -30px;
+    }
+
+    .header-text .experience {
+        font-size: 20px;
+        margin-left: -3px;
+    }
+
+    .header-text .number {
+        font-size: 50px;
+        margin-left: -3px;
+    }
+
+    .header-text .text {
+        font-size: 20px;
+        /* Verklein de grootte van de tekst */
+    }
+
+    .profile-image .abstract-bg {
+        width: 230px;
+        height: 270px;
+    }
+
+    .header {
+        overflow: hidden;
+    }
+
+    .profile-image img {
+        width: 250px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #titel-aboutme {
+        font-size: 28px;
+    }
+
+    .aboutme-style {
+        font-size: 16px;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 34px;
+    }
+
+    .skills {
+        display: none;
+    }
+
+    /* Responsive stijl Graphic Design */
+    .image-container {
+        width: 100%;
+        /* Zorg ervoor dat de container de volledige breedte inneemt op kleinere schermen */
+        margin: -2px auto;
+        /* Centreer de container */
+    }
+
+    .titelProjecten {
+        font-size: 34px;
+    }
+
+    .headerGraphicD {
+        height: 270px;
+    }
+
+    .overlay-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .close-icon {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .InfoSchoolprojectTekst {
+        font-size: 20px;
+    }
+
+    .headerFotografie {
+        height: 40vh;
+    }
+
+    .TitelModal {
+        font-size: 30px;
+    }
+    .project-overlay h3.titelProjectOverlay {
+        font-size: 18px;
+    }
+    .category-tags .category-tag {
+        font-size: 5px; /* Pas de gewenste grootte toe */
+    }
+   
+    .project-button {
+        padding: 5px 15px; /* Maak de knop kleiner */
+    }
+    .project-button span.bekijkProject {
+        font-size: 10px ;
+    }
+
+    .project-button .arrow-icon {
+        width: 16px; /* Maak de pijl nog kleiner */
+    }
+ 
+}
+
+
+.img {
+    display: block;
+    width: 100%; /* Zorg ervoor dat de afbeelding de container vult */
+    height: auto; /* Behoud de oorspronkelijke hoogte-breedteverhouding */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding niet vervormt */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 50%; 
+    height: 100%; 
+    background-color: #00000045;
+    backdrop-filter: blur(10px);    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: right 0.8s ease; 
+}
+
+.project-overlay h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.image-container:hover .project-overlay {
+    right: 0; /* Schuif naar binnen bij hover */
+}
+.category-tags {
+    display: flex;
+    flex-wrap: wrap; /* Zorg ervoor dat de tags naar een nieuwe regel gaan als er geen ruimte is */
+    gap: 10px; /* Ruimte tussen de tags */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: center; /* Centreer de tags */
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(200, 200, 200, 0.5); /* Lichte, subtiele rand */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Voeg een zachte schaduw toe */
+    border-radius: 8px; /* Maak de hoeken afgerond voor een moderne uitstraling */    border-radius: 8px; /* Afgeronde hoeken */
+    text-align: center;
+    white-space: nowrap; /* Zorg ervoor dat de tekst niet afbreekt */
+}
+h3.titelProjectOverlay{
+    font-size: 65px; 
+    font-weight: 700;
+}
+
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ED6B3C;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    width: 43px;
+    height: 43px;
+    background-color: white;
+    border-radius: 50%;
+    transition: width 0.3s ease-out, height 0.3s ease-out, right 0.3s ease-out;
+    transform: translateY(-50%);
+}
+
+.project-button:hover::before {
+    width: 120%;
+    height: 300%;
+    right: -10%;
+    border-radius: 50px;
+}
+
+.project-button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
+}
+
+.arrow-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    right: -25px; /* Plaats de pijl tegen de rechterkant */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-icon::after {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.project-button span:hover {
+    color: black;
+}
+body.modal-open {
+    backdrop-filter: blur(5px); /* Voeg een blur toe */
+    filter: blur(5px); /* Voor browsers die geen backdrop-filter ondersteunen */
+}
+.overlay {
+    display: none; /* Verberg standaard */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Donkere overlay */
+    backdrop-filter: blur(10px); /* Voeg blur toe */
+}
+
+body.modal-open .overlay {
+    display: block; /* Toon de overlay wanneer de modal open is */
 }
